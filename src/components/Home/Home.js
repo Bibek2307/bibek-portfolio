@@ -11,6 +11,7 @@ const Home = () => {
                 <p>I build modern, performant web applications and love solving complex problems with code.</p>
                 <p className="tagline">Turning complex problems into elegant solutions</p>
             </div>
+            <div className="scroll-indicator-wrapper">
             <div className="scroll-indicator">
                 <span>Scroll</span>
                 {/* SVG for the down arrow */}
@@ -18,6 +19,7 @@ const Home = () => {
                     <path d="M12 5V19" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                     <path d="M19 12L12 19L5 12" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                 </svg>
+            </div>
             </div>
         </section>
     );

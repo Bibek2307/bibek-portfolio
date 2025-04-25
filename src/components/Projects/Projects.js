@@ -20,7 +20,7 @@ const projectData = [
         title: "Orrery Webapp for NASA SPACEAPPS challenge",
         description: "3D interactive visualization that tracks asteroids and comets, allowing us to monitor their orbits and proximity to Earth in real-time",
         tags: ["Html", "Three.js", "JavaScript", "Css"],
-        imageUrl: '/orrery.gif', // Reference from public folder
+        imageUrl: '/orrery.mp4', // Reference from public folder
         codeLink: "https://github.com/Bibek2307/Orrery-Webapp",
         demoLink: "https://nebulon-orrery-spaceapp.netlify.app/"
     },
@@ -44,15 +44,15 @@ const projectData = [
 
 // Define animation variants for the section
 const sectionVariants = {
-  hidden: { opacity: 0, y: 50 },
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: {
-      duration: 0.6, // Adjust duration as needed
-      ease: "easeOut"
+    hidden: { opacity: 0, y: 50 },
+    visible: {
+        opacity: 1,
+        y: 0,
+        transition: {
+            duration: 0.6, // Adjust duration as needed
+            ease: "easeOut"
+        }
     }
-  }
 };
 
 
@@ -79,7 +79,22 @@ const Projects = () => {
                 {projectData.map((project, index) => (
                     // Optionally wrap cards for staggered animation (more complex)
                     <div className="project-card" key={index}>
-                        <img src={process.env.PUBLIC_URL + project.imageUrl} alt={project.title} className="project-image" />
+                        {project.imageUrl.endsWith('.mp4') || project.imageUrl.endsWith('.webm') ? (
+                            <video
+                                className="project-image"
+                                src={process.env.PUBLIC_URL + project.imageUrl}
+                                autoPlay
+                                loop
+                                muted
+                                playsInline
+                            />
+                        ) : (
+                            <img
+                                src={process.env.PUBLIC_URL + project.imageUrl}
+                                alt={project.title}
+                                className="project-image"
+                            />
+                        )}
                         <div className="project-content">
                             <h3>{project.title}</h3>
                             <p>{project.description}</p>
