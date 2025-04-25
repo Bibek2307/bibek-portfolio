@@ -26,6 +26,9 @@
 .hero-content {
     max-width: 800px; /* Limit width for better readability */
     margin: 0 auto; /* Center the content block */
+    /* Add padding if needed based on Tailwind px-4 */
+    padding-left: 1rem;
+    padding-right: 1rem;
 }
 
 /* --- Apply Animation to Home Content --- */
@@ -132,26 +135,50 @@
     /* Ensure no extra vertical space */
     vertical-align: baseline;
 }
+.hero-content .name {
+    /* Inherits font-family from h1 (serif) */
+    /* Match h1 font size */
+    font-size: inherit; /* Inherit size from h1 */
+    font-style: italic;
+    color: #00ffcc;
+    /* Match h1 weight or adjust if needed */
+    font-weight: inherit; /* Inherit weight from h1 */
+    /* Ensure no extra vertical space */
+    vertical-align: baseline;
+}
 .scroll-indicator-wrapper {
     position: absolute;
+    /* mt-16 translates to 4rem spacing from content above */
+    /* Using bottom positioning, ensure enough space */
     bottom: 2rem;
     left: 50%;
-    transform: translateX(-50%); /* Only centering */
-  }
+    transform: translateX(-50%);
+    /* Add top margin if bottom positioning isn't enough */
+    /* margin-top: 4rem; */
+}
 .scroll-indicator {
   display: flex;
   flex-direction: column;
   align-items: center;
   color: #ccc;
-  font-size: 0.9rem;
-  animation: fadeInUp 0.8s ease-out forwards 1.2s, bounceY 2s infinite 2s;
+  /* text-sm (14px) to md:text-base (16px) */
+  font-size: 0.875rem;
+  /* Apply bounce animation - Tailwind's animate-bounce uses a specific keyframe */
+  /* Keep existing fadeInUp + bounceY for now, or replace bounceY with Tailwind's version if preferred */
+  animation: fadeInUp 0.8s ease-out forwards 1.6s, bounceY 1s infinite 2s; /* Adjusted delays/duration */
   opacity: 0;
   cursor: default;
 }
 
-.scroll-indicator svg {
-    margin-top: 0.5rem;
-    width: 20px;
+.scroll-indicator span:first-child { /* Target "Scroll" text */
+    /* mb-2 translates to 0.5rem */
+    margin-bottom: 0.5rem;
+}
+
+.scroll-indicator svg { /* Target arrow */
+    margin-top: 0; /* Remove previous margin */
+    /* text-xl (20px) to md:text-2xl (24px) */
+    width: 20px; /* Adjust size based on text-xl/2xl */
     height: 20px;
     color: #00f0a0;
 }

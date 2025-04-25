@@ -6,7 +6,8 @@ const Home = () => {
         <section className="home-section"> {/* Use a specific class */}
             <div className="hero-content">
                 <h1>Let's make it <span className="highlight">Compute</span></h1>
-                <h2>Bibek Mukherjee</h2>
+                <br></br>
+                <h1><span className="name">Bibek Mukherjee</span></h1>
                 <p className="subtitle">Computer Science Engineer & Web Developer</p>
                 <p>I build modern, performant web applications and love solving complex problems with code.</p>
                 <p className="tagline">Turning complex problems into elegant solutions</p>
