@@ -23,10 +23,21 @@ body {
 }
 
 .content {
-    margin-left: 150px; /* Adjust based on final Navbar width */
-    width: calc(100% - 150px); /* Adjust based on final Navbar width */
-    padding: 2rem;
-    z-index: 1; /* Ensure content is above particles */
+    padding-top: 60px; /* Example: Adjust if navbar height changes */
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1200px; /* Example max-width */
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+
+/* --- Responsive Styles --- */
+@media (max-width: 768px) {
+  .content {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 50px; /* Adjust if needed */
+  }
 }
 
 /* General Section Styling */

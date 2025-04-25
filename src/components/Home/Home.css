@@ -108,3 +108,32 @@
         font-size: 1.1rem;
     }
 }
+
+@media (max-width: 768px) {
+    .hero-section {
+        padding: 0 2rem; /* Reduce horizontal padding */
+        min-height: 80vh; /* Adjust height if needed */
+    }
+
+    .hero-content h1 {
+        font-size: 2.5rem; /* Decrease heading size */
+    }
+
+    .hero-content p {
+        font-size: 1rem; /* Decrease paragraph size */
+    }
+
+    .hero-content .tagline {
+        font-size: 1.2rem; /* Adjust tagline size */
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-section {
+        padding: 0 1rem; /* Further reduce padding */
+    }
+
+    .hero-content h1 {
+        font-size: 2rem; /* Further decrease heading size */
+    }
+}

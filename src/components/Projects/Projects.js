@@ -13,32 +13,32 @@ const projectData = [
         tags: ["Python", "Streamlit", "FastAPI", "Scikit-learn"],
         // Reference images from the public folder using /
         imageUrl: '/intuitron.png', // Assuming image is directly in public folder
-        codeLink: "#", // Replace with actual link
-        demoLink: "#" // Replace with actual link
+        codeLink: "https://github.com/Bibek2307/Syntax_Squad", // Replace with actual link
+        demoLink: "https://huggingface.co/spaces/WickedFaith/Synthack-SyntaxSquad" // Replace with actual link
     },
     {
         title: "Orrery Webapp for NASA SPACEAPPS challenge",
         description: "3D interactive visualization that tracks asteroids and comets, allowing us to monitor their orbits and proximity to Earth in real-time",
         tags: ["Html", "Three.js", "JavaScript", "Css"],
         imageUrl: '/orrery.gif', // Reference from public folder
-        codeLink: "#",
-        demoLink: "#"
+        codeLink: "https://github.com/Bibek2307/Orrery-Webapp",
+        demoLink: "https://nebulon-orrery-spaceapp.netlify.app/"
     },
     {
         title: "AI-Powered Question Management in Conferences",
         description: "AI-Powered Question Management System designed to address challenges in conferences... Leveraging NLP and deep learning techniques...",
         tags: ["Python", "MongoDB", "Flask", "React"],
         imageUrl: '/qagenie.png', // Reference from public folder
-        codeLink: "#",
-        journalLink: "#" // Specific link type for this project
+        codeLink: "https://github.com/Bibek2307/QnA-Genie",
+        journalLink: "https://ijsrem.com/download/ai-powered-question-management-in-conferences/" // Specific link type for this project
     },
     {
         title: "Expense Tracker App",
         description: "It is a simple DBMS project I created with the sole purpose of learning more about sql, php, javascript and webdev",
         tags: ["PHP", "MySQL", "HTML/CSS", "DBMS"],
         imageUrl: '/expense.png', // Reference from public folder
-        codeLink: "#",
-        demoLink: "#"
+        codeLink: "https://github.com/Bibek2307/Expense-Tracker",
+        demoLink: "https://expense-tracker2307.free.nf"
     }
 ];
 

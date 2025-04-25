@@ -24,6 +24,10 @@
     text-align: left;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     box-shadow: 0 0 10px rgba(0, 240, 160, 0.1); /* Subtle glow */
+    /* Add this line */
+    transform: translateZ(0);
+    /* Or alternatively, try: */
+    /* will-change: transform; */
 }
 
 .project-card:hover {

@@ -44,13 +44,13 @@ const Contact = () => {
                 Interested in working together or have a question? Feel free to reach out!
             </p>
             <div className="social-links">
-                <a href="mailto:your.email@example.com" aria-label="Email" target="_blank" rel="noopener noreferrer">
+                <a href="mailto:https://bibek.mukherjee2307@gmail.com" aria-label="Email" target="_blank" rel="noopener noreferrer">
                     <FaEnvelope />
                 </a>
-                <a href="https://github.com/yourusername" aria-label="GitHub" target="_blank" rel="noopener noreferrer">
+                <a href="https://github.com/Bibek2307" aria-label="GitHub" target="_blank" rel="noopener noreferrer">
                     <FaGithub />
                 </a>
-                <a href="https://linkedin.com/in/yourusername" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
+                <a href="https://linkedin.com/in/bibek-mukherjee-" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
                     <FaLinkedin />
                 </a>
                 {/* Add other links as needed */}
