@@ -1,275 +1,221 @@
 /* --- Navbar Base Styles (Desktop First) --- */
 .navbar {
-  display: flex;
-  justify-content: space-between; /* Or space-around/flex-start depending on logo */
-  align-items: center;
-  padding: 0.8rem 2rem; /* Adjust padding as needed */
-  background-color: rgba(17, 24, 39, 0.8); /* Example: Dark background with some transparency */
-  backdrop-filter: blur(10px); /* Optional: Frosted glass effect */
-  -webkit-backdrop-filter: blur(10px); /* Safari support */
-  position: fixed; /* Keep it at the top */
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 1000; /* Ensure it's above other content */
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* Subtle separator */
-  transition: background-color 0.3s ease; /* Smooth transition on scroll later */
-}
-
-.navbar-logo {
-  /* Add styles for your logo if you have one */
-  color: #fff;
-  font-size: 1.5rem;
-  text-decoration: none;
-}
-
-.nav-links {
-  display: flex;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-.nav-links li {
-  margin-left: 2rem; /* Spacing between links */
-}
-
-.nav-links a {
-  color: #e5e7eb; /* Light gray text */
-  text-decoration: none;
-  font-size: 1rem;
-  padding: 0.5rem 0;
-  position: relative;
-  transition: color 0.3s ease;
-}
-
-.nav-links a:hover {
-  color: #ffffff; /* White on hover */
-}
-
-/* Optional: Underline effect on hover/active */
-.nav-links a::after {
-  content: '';
-  position: absolute;
-  width: 0;
-  height: 2px;
-  bottom: 0;
-  left: 0;
-  background-color: #34d399; /* Emerald color */
-  transition: width 0.3s ease;
-}
-
-.nav-links a:hover::after {
-  width: 100%;
-}
-
-/* --- Hamburger Menu Icon (Hidden on Desktop) --- */
-.menu-icon {
-  display: none; /* Hide by default */
-  cursor: pointer;
-  /* Basic styles for the icon (you can use an SVG or font icon) */
-  padding: 0.5rem;
-  /* Example using divs for lines */
-  flex-direction: column;
-  justify-content: space-around;
-  width: 30px;
-  height: 25px;
-}
-
-.menu-icon div {
-  width: 100%;
-  height: 3px;
-  background-color: #e5e7eb;
-  border-radius: 2px;
-  transition: all 0.3s ease;
-}
-
-
-/* --- Responsive Styles (Mobile) --- */
-@media (max-width: 768px) {
-  .nav-links {
-    display: none; /* Hide the links container */
-    flex-direction: column; /* Stack links vertically */
-    width: 100%;
-    position: absolute; /* Position it below the navbar */
-    top: 100%; /* Start right below the navbar */
-    left: 0;
-    background-color: rgba(17, 24, 39, 0.95); /* Slightly more opaque background */
-    backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.8rem 2rem;
+    background-color: rgba(17, 24, 39, 0.75); /* Slightly transparent */
+    backdrop-filter: blur(10px); /* Frosted glass effect */
     -webkit-backdrop-filter: blur(10px);
-    padding: 1rem 0;
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    transition: background-color 0.3s ease;
   }
-
-  .nav-links.active {
-    display: flex; /* Show the links when menu is active */
+  
+  .navbar-logo {
+    color: #fff;
+    font-size: 1.5rem;
+    text-decoration: none;
   }
-
+  
+  /* --- Nav Links (Desktop) --- */
+  .nav-links {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
   .nav-links li {
-    margin: 0; /* Remove horizontal margin */
-    width: 100%;
-    text-align: center;
+    margin-left: 2rem;
   }
-
+  
   .nav-links a {
-    display: block; /* Make links take full width */
-    padding: 1rem 0; /* Increase padding for easier tapping */
-    width: 100%;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.05); /* Separator for mobile links */
+    color: #e5e7eb;
+    text-decoration: none;
+    font-size: 1rem;
+    padding: 0.5rem 0;
+    position: relative;
+    transition: color 0.3s ease;
   }
-
-   .nav-links li:last-child a {
-     border-bottom: none; /* Remove border from last item */
-   }
-
+  
+  .nav-links a:hover {
+    color: #ffffff;
+  }
+  
   .nav-links a::after {
-    /* Disable underline effect on mobile if desired */
-    display: none;
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #34d399;
+    transition: width 0.3s ease;
   }
-
+  
+  .nav-links a:hover::after {
+    width: 100%;
+  }
+  
+  /* --- Hamburger Menu Icon --- */
   .menu-icon {
-    display: flex; /* Show the hamburger icon */
+    display: none;
+    position: fixed;
+    top: 1rem;
+    right: 1.5rem;
+    z-index: 1001;
+    cursor: pointer;
+    padding: 0.5rem;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 35px;
+    height: 30px;
+    background-color: rgba(17, 24, 39, 0.75);
+    border-radius: 6px;
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
   }
-
-  /* Optional: Animation for hamburger icon when active */
-  .menu-icon.active .line1 {
-    transform: rotate(-45deg) translate(-5px, 6px);
+  
+  .menu-icon div {
+    width: 100%;
+    height: 3px;
+    background-color: #e5e7eb;
+    border-radius: 2px;
+    transition: all 0.3s ease-in-out;
   }
-  .menu-icon.active .line2 {
-    opacity: 0;
-  }
-  .menu-icon.active .line3 {
-    transform: rotate(45deg) translate(-5px, -6px);
-  }
-}
-
-
-/* --- Navbar Styles (Desktop - Vertical Sidebar) --- */
-.main-nav {
+  
+  /* --- Main Nav Sidebar (Hidden in Desktop) --- */
+  .main-nav {
     position: fixed;
     top: 0;
     left: 0;
     height: 100vh;
-    width: 150px; /* Fixed width for the navbar */
+    width: 150px;
     display: flex;
-    align-items: center; /* Vertically center the list */
-    justify-content: center; /* Horizontally center the list */
-    padding: 0 1rem; /* Some padding */
-    z-index: 1000; /* Ensure it's above other content */
-    background-color: transparent; /* Or a very dark semi-transparent background if needed */
-    transition: transform 0.3s ease; /* For potential mobile slide-in */
-}
-
-.main-nav ul {
+    align-items: center;
+    justify-content: center;
+    padding: 0 1rem;
+    z-index: 1000;
+    background-color: transparent;
+    transition: transform 0.3s ease;
+  }
+  
+  .main-nav ul {
     list-style: none;
     padding: 0;
     margin: 0;
-    text-align: left; /* Align text to the left */
-    width: 100%; /* Ensure ul takes full width of nav */
-}
-
-.main-nav ul li {
-    margin: 2rem 0; /* Increased spacing between items */
-}
-
-.main-nav ul li a {
-    color: #ccc; /* Default link color */
+    text-align: left;
+    width: 100%;
+  }
+  
+  .main-nav ul li {
+    margin: 2rem 0;
+  }
+  
+  .main-nav ul li a {
+    color: #ccc;
     text-decoration: none;
     font-size: 1rem;
     transition: color 0.3s ease;
-    display: block; /* Make the whole area clickable */
-    padding: 0.5rem 0; /* Add some vertical padding */
-}
-
-.main-nav ul li a:hover {
-    color: #00f0a0; /* Highlight color on hover */
-}
-
-/* Add a class for the active link - requires JS later */
-.main-nav ul li a.active {
+    display: block;
+    padding: 0.5rem 0;
+  }
+  
+  .main-nav ul li a:hover {
+    color: #00f0a0;
+  }
+  
+  .main-nav ul li a.active {
     color: #00f0a0;
     font-weight: bold;
-}
-
-/* --- Hamburger Menu Icon (Hidden on Desktop) --- */
-.menu-icon {
-  display: none; /* Hide by default on desktop */
-  position: fixed; /* Keep it fixed on the screen */
-  top: 1rem;
-  right: 1.5rem; /* Position top-right */
-  z-index: 1001; /* Above the navbar content */
-  cursor: pointer;
-  padding: 0.5rem;
-  /* Styles using divs for lines */
-  flex-direction: column;
-  justify-content: space-around;
-  width: 35px; /* Slightly larger */
-  height: 30px;
-  background-color: rgba(17, 24, 39, 0.7); /* Optional background for visibility */
-  border-radius: 4px;
-  backdrop-filter: blur(5px);
-  -webkit-backdrop-filter: blur(5px);
-}
-
-.menu-icon div {
-  width: 100%;
-  height: 3px;
-  background-color: #e5e7eb;
-  border-radius: 2px;
-  transition: all 0.3s ease-in-out;
-}
-
-
-/* --- Responsive Styles (Mobile) --- */
-@media (max-width: 768px) {
-  .main-nav {
-    /* Hide the vertical navbar off-screen */
-    transform: translateX(-100%);
-    width: 250px; /* Or adjust width for mobile slide-out/dropdown */
-    height: auto; /* Allow height to adjust to content */
-    top: 0;
-    left: 0;
-    position: fixed; /* Change from fixed for dropdown behavior */
-    background-color: rgba(20, 24, 30, 0.95); /* Dark background for dropdown */
-    backdrop-filter: blur(1px);
-    -webkit-backdrop-filter: blur(10px);
-    padding: 4rem 1rem 1rem 1rem; /* Add padding top to clear menu icon */
-    box-shadow: 2px 0 5px rgba(0,0,0,0.2);
-    align-items: flex-start; /* Align items to top */
-    justify-content: flex-start;
-    /* Remove height: 100vh if you want a dropdown, not a full sidebar */
-    /* height: 100vh; */
   }
-
-  .main-nav.active {
-    transform: translateX(0); /* Slide in when active */
+  
+  /* --- Mobile Styles --- */
+  @media (max-width: 768px) {
+    .main-nav {
+      transform: translateX(-100%);
+      width: 85%;
+      max-width: 300px;
+      height: 100vh;
+      background-color: rgba(15, 23, 42, 0.85); /* Dark navy with glassmorphism */
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      position: fixed;
+      top: 0;
+      left: 0;
+      padding: 5rem 1.5rem 2rem 1.5rem;
+      box-shadow: 4px 0 12px rgba(0, 0, 0, 0.3);
+      display: flex;
+      align-items: flex-start;
+      justify-content: flex-start;
+      flex-direction: column;
+      transition: transform 0.4s ease-in-out;
+      border-right: 1px solid rgba(255, 255, 255, 0.05);
+    }
+  
+    .main-nav.active {
+      transform: translateX(0);
+    }
+  
+    .main-nav ul {
+      text-align: left;
+      width: 100%;
+    }
+  
+    .main-nav ul li {
+      margin: 1.2rem 0;
+    }
+  
+    .main-nav ul li a {
+      display: block;
+      padding: 1rem 0;
+      font-size: 1.2rem;
+      color: #e5e7eb;
+      transition: all 0.3s ease;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    }
+  
+    .main-nav ul li:last-child a {
+      border-bottom: none;
+    }
+  
+    .main-nav ul li a:hover {
+      color: #00f0a0;
+      transform: translateX(5px);
+    }
+  
+    .menu-icon {
+      display: flex;
+    }
+  
+    .menu-icon.active .line1 {
+      transform: rotate(-45deg) translate(-7px, 7px);
+    }
+  
+    .menu-icon.active .line2 {
+      opacity: 0;
+    }
+  
+    .menu-icon.active .line3 {
+      transform: rotate(45deg) translate(-7px, -7px);
+    }
   }
-
-  .main-nav ul {
-    text-align: center; /* Center text in mobile dropdown */
+  @media (min-width: 769px) {
+    body::before {
+      content: '';
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 100vh;
+      width: 2px; /* Adjust thickness here */
+      background: #00f0a0;
+      box-shadow: 0 25px 25px #00f0a0, 0 0 50px #00f0a0;
+      z-index: 998; /* Keep above background but below nav content */
+      pointer-events: none;
+    }
   }
-
-  .main-nav ul li {
-    margin: 1rem 0; /* Reduce spacing for mobile */
-  }
-
-   .main-nav ul li a {
-     padding: 0.8rem 0; /* Adjust padding */
-     font-size: 1.1rem; /* Slightly larger font for mobile */
-   }
-
-  .menu-icon {
-    display: flex; /* Show the hamburger icon */
-  }
-
-  /* Animation for hamburger icon when active */
-  .menu-icon.active .line1 {
-    transform: rotate(-45deg) translate(-7px, 7px);
-  }
-  .menu-icon.active .line2 {
-    opacity: 0;
-  }
-  .menu-icon.active .line3 {
-    transform: rotate(45deg) translate(-7px, -7px);
-  }
-}
