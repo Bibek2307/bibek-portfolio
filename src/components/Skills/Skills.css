@@ -1,0 +1,110 @@
+/* Inherits general section styling and visibility transition from App.css */
+.skills-section {
+     width: 100%;
+     align-items: center; /* Center content horizontally */
+}
+
+.skills-grid {
+    display: grid;
+    /* Create 3 equal columns */
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    width: 100%;
+    max-width: 1000px; /* Adjust max-width as needed */
+    margin: 0 auto; /* Center the grid */
+    padding: 0 1rem; /* Add some padding on smaller screens */
+}
+
+.skill-category {
+    background-color: rgba(15, 15, 15, 0.6);
+    border: 1px solid rgba(0, 240, 160, 0.2);
+    border-radius: 8px;
+    padding: 2rem 1.5rem;
+    text-align: left;
+    /* Keep existing transitions */
+    transition: border-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 0 10px rgba(0, 240, 160, 0.1);
+}
+
+/* Remove the static highlighted class style */
+/*
+.skill-category.highlighted {
+    border-color: rgba(0, 240, 160, 0.8);
+    box-shadow: 0 0 25px rgba(0, 240, 160, 0.5);
+}
+*/
+
+/* Add hover effect to all skill categories */
+.skill-category:hover {
+    border-color: rgba(0, 240, 160, 0.8);
+    box-shadow: 0 0 25px rgba(0, 240, 160, 0.5);
+    transform: translateY(-3px); /* Optional: Add a slight lift on hover */
+}
+
+
+.skill-category h3 {
+    font-size: 1.5rem;
+    color: #ffffff;
+    margin-bottom: 1.5rem;
+    font-weight: 500;
+    border-bottom: 1px solid rgba(0, 240, 160, 0.3);
+    padding-bottom: 0.5rem;
+}
+
+.skill-category ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.skill-category ul li {
+    color: #ccc;
+    font-size: 1rem;
+    margin-bottom: 0.8rem;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem; /* Space between icon and text */
+}
+
+/* Style for icons if you add them */
+.skill-category ul li svg {
+    color: #00f0a0; /* Icon color */
+    font-size: 1.2em; /* Adjust icon size */
+    flex-shrink: 0; /* Prevent icon from shrinking */
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+    .skills-grid {
+        grid-template-columns: 1fr 1fr; /* Two columns on medium screens */
+        max-width: 700px;
+    }
+    /* Center the last item if odd number */
+    .skill-category:last-child:nth-child(odd) {
+        grid-column: span 2;
+        justify-self: center;
+        width: calc(50% - 1rem); /* Adjust width to match others */
+    }
+}
+
+
+@media (max-width: 576px) {
+    .skills-grid {
+        grid-template-columns: 1fr; /* Stack columns on small screens */
+        max-width: 400px;
+        gap: 1.5rem;
+    }
+     .skill-category:last-child:nth-child(odd) {
+        grid-column: span 1; /* Reset span */
+        width: 100%; /* Full width */
+    }
+    .skill-category {
+        padding: 1.5rem 1rem;
+    }
+    .skill-category h3 {
+        font-size: 1.3rem;
+    }
+    .skill-category ul li {
+        font-size: 0.95rem;
+    }
+}

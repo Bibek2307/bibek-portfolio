@@ -1,0 +1,115 @@
+/* Inherits general section styling and visibility transition from App.css */
+.projects-section {
+    /* Add specific padding if needed, otherwise defaults from App.css */
+    width: 100%; /* Ensure section takes full width within its container */
+}
+
+.project-grid {
+    display: grid;
+    /* Adjust minmax for desired card size */
+    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+    gap: 2.5rem; /* Increased gap */
+    width: 100%;
+    max-width: 1300px; /* Adjust max-width as needed */
+    margin: 0 auto; /* Center the grid */
+}
+
+.project-card {
+    background-color: rgba(15, 15, 15, 0.6); /* Darker, slightly transparent background */
+    border: 1px solid rgba(0, 240, 160, 0.2); /* Subtle neon border */
+    border-radius: 8px;
+    overflow: hidden; /* Keep image corners rounded */
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 0 10px rgba(0, 240, 160, 0.1); /* Subtle glow */
+}
+
+.project-card:hover {
+    transform: translateY(-5px); /* Slight lift on hover */
+    box-shadow: 0 0 25px rgba(0, 240, 160, 0.4); /* Enhanced glow on hover */
+}
+
+.project-image {
+    width: 100%;
+    height: 250px; /* Fixed height for images */
+    object-fit: cover; /* Cover the area, might crop */
+    display: block;
+    border-bottom: 1px solid rgba(0, 240, 160, 0.2); /* Separator line */
+}
+
+.project-content {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1; /* Allow content to fill space */
+}
+
+.project-content h3 {
+    font-size: 1.4rem;
+    color: #00f0a0; /* Highlight color */
+    margin-bottom: 0.75rem;
+    font-weight: 500;
+}
+
+.project-content p {
+    font-size: 0.95rem;
+    color: #ccc;
+    margin-bottom: 1rem;
+    flex-grow: 1; /* Push tags/links to bottom */
+    line-height: 1.5;
+}
+
+.tags {
+    margin-bottom: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.tags span {
+    background-color: rgba(0, 240, 160, 0.1);
+    color: #00f0a0;
+    padding: 0.3rem 0.6rem;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    border: 1px solid rgba(0, 240, 160, 0.3);
+}
+
+.project-links a {
+    color: #eee;
+    text-decoration: none;
+    margin-right: 1rem;
+    font-size: 0.9rem;
+    transition: color 0.3s ease;
+    border-bottom: 1px solid transparent;
+}
+
+.project-links a:hover {
+    color: #00f0a0;
+    border-bottom-color: #00f0a0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+    .project-grid {
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    }
+    .project-image {
+        height: 200px;
+    }
+}
+
+@media (max-width: 576px) {
+    .project-grid {
+        grid-template-columns: 1fr; /* Stack cards on small screens */
+        gap: 1.5rem;
+    }
+     .project-content h3 {
+        font-size: 1.2rem;
+    }
+     .project-content p {
+        font-size: 0.9rem;
+    }
+}

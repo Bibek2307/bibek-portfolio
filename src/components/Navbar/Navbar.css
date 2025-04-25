@@ -1,0 +1,42 @@
+.main-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 150px; /* Fixed width for the navbar */
+    display: flex;
+    align-items: center; /* Vertically center the list */
+    justify-content: center; /* Horizontally center the list */
+    padding: 0 1rem; /* Some padding */
+    z-index: 10; /* Ensure it's above particles but potentially below modals etc. */
+    background-color: transparent; /* Or a very dark semi-transparent background if needed */
+}
+
+.main-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: left; /* Align text to the left */
+}
+
+.main-nav ul li {
+    margin: 2rem 0; /* Increased spacing between items */
+}
+
+.main-nav ul li a {
+    color: #ccc; /* Default link color */
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+    display: block; /* Make the whole area clickable */
+}
+
+.main-nav ul li a:hover {
+    color: #00f0a0; /* Highlight color on hover */
+}
+
+/* Add a class for the active link - requires JS later */
+.main-nav ul li a.active {
+    color: #00f0a0;
+    font-weight: bold;
+}

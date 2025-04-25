@@ -1,0 +1,60 @@
+/* Inherits general section styling and visibility transition from App.css */
+.contact-section {
+    width: 100%;
+    align-items: center; /* Center content horizontally */
+    min-height: 60vh; /* Make this section shorter */
+    padding-bottom: 2rem; /* Add padding at the bottom */
+    position: relative; /* Needed for footer positioning */
+}
+
+.contact-subtitle {
+    color: #ccc;
+    font-size: 1.1rem;
+    margin-bottom: 2.5rem;
+    max-width: 500px;
+}
+
+.social-links {
+    display: flex;
+    gap: 2rem; /* Space between icons */
+    margin-bottom: 4rem; /* Space above footer */
+}
+
+.social-links a {
+    color: #ccc;
+    font-size: 2rem; /* Size of the icons */
+    transition: color 0.3s ease, transform 0.3s ease;
+    display: inline-block; /* Allows transform */
+}
+
+.social-links a:hover {
+    color: #00f0a0; /* Highlight color on hover */
+    transform: scale(1.1); /* Slightly enlarge icon on hover */
+}
+
+.footer {
+    position: absolute; /* Position at the bottom of the section */
+    bottom: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #888; /* Dim color for footer */
+    font-size: 0.9rem;
+    width: 100%; /* Ensure it spans width for centering */
+    text-align: center;
+}
+
+/* Responsive adjustments */
+@media (max-width: 576px) {
+    .contact-subtitle {
+        font-size: 1rem;
+    }
+    .social-links {
+        gap: 1.5rem;
+    }
+    .social-links a {
+        font-size: 1.8rem;
+    }
+    .footer {
+        font-size: 0.8rem;
+    }
+}

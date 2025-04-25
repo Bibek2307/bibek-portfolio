@@ -1,0 +1,44 @@
+/* Inherits general section styling and visibility transition from App.css */
+.about-section {
+    width: 100%;
+    align-items: center; /* Center content horizontally */
+    /* Adjust min-height if needed, default is 100vh */
+}
+
+/* Override general section alignment for text */
+#about-section {
+    text-align: left; /* Align text to the left */
+    align-items: flex-start; /* Align items to the top */
+    padding-left: 4rem; /* Add padding to align with other content */
+    padding-right: 4rem;
+}
+
+#about-section h2 {
+    width: 100%; /* Make heading take full width */
+    text-align: center; /* Center the heading */
+    margin-bottom: 3rem; /* Keep spacing below heading */
+}
+
+
+.about-content {
+    max-width: 800px; /* Limit text width for readability */
+    margin: 0 auto; /* Center the text block */
+}
+
+.about-content p {
+    color: #ccc;
+    font-size: 1.05rem; /* Slightly larger font size */
+    line-height: 1.7; /* Increase line spacing */
+    margin-bottom: 1.5rem; /* Space between paragraphs */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    #about-section {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+    .about-content p {
+        font-size: 1rem;
+    }
+}
