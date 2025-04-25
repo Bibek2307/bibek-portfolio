@@ -6,7 +6,7 @@ import Skills from './components/Skills/Skills';
 import About from './components/About/About';
 import Contact from './components/Contact/Contact';
 import ParticleBackground from './components/ParticleBackground/ParticleBackground';
-import CustomCursor from './components/CustomCursor/CustomCursor'; // Ensure this import is correct
+import CustomCursor from './components/CustomCursor/CustomCursor';
 import './App.css';
 
 function App() {

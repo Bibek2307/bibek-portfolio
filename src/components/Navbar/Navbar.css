@@ -32,12 +32,15 @@
   
   .nav-links li {
     margin-left: 2rem;
+    font-size: 1.3rem;    /* increased */
+    font-weight: 700; 
   }
   
   .nav-links a {
     color: #e5e7eb;
     text-decoration: none;
-    font-size: 1rem;
+    font-size: 1.3rem;    /* increased */
+    font-weight: 700; 
     padding: 0.5rem 0;
     position: relative;
     transition: color 0.3s ease;
@@ -214,9 +217,9 @@
       height: 100vh;
       width: 2px; /* Adjust thickness here */
       background: #00f0a0;
-      box-shadow:0 0 60px #00f0a0, 
-      0 0 90px #00f0a0, 
-      0 0 120px #00f0a0;
+      box-shadow:50px 0 60px #00f0a0, 
+      50px 0 90px #00f0a0, 
+      50px 0 120px #00f0a0;
       z-index: 998; /* Keep above background but below nav content */
       pointer-events: none;
       filter: brightness(1.2);
