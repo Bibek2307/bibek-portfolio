@@ -1,6 +1,5 @@
 # Bibek Mukherjee - Personal Portfolio
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 This repository contains the source code for my personal portfolio website, showcasing my projects, skills, and experience as a Computer Science Engineer & Web Developer.
 
